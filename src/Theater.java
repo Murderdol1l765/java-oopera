@@ -1,3 +1,11 @@
+import person.Actor;
+import person.Director;
+import person.Person;
+import show.Ballet;
+import show.Opera;
+import show.Show;
+import util.Gender;
+
 import java.util.ArrayList;
 
 public class Theater {
@@ -15,9 +23,8 @@ public class Theater {
         Director director1 = new Director("Ларс", "Фон Триер", Gender.MALE, 3);
         Director director2 = new Director("Квентин", "Тарантино", Gender.MALE, 8);
 
-        // Для хореографа и автора музыки было бы логично использовать Person, но по формулировке задания это не является требованием, поэтому оставил простыми строками.
-        String musicAuthor = "Автор музыки";
-        String choreographer = "Хореограф";
+        Person musicAuthor = new Person("Музыкальный", "Человек", Gender.FEMALE);
+        Person choreographer = new Person("Танцевальный", "Человек", Gender.FEMALE);
 
         ArrayList<Actor> showListOfActors = new ArrayList<Actor>();
         ArrayList<Actor> operaListOfActors = new ArrayList<Actor>();
@@ -50,5 +57,7 @@ public class Theater {
         // Выводим текст либретто для оперы и балета
         opera.printLibrettoText();
         ballet.printLibrettoText();
+
+        System.out.println(director1);
     }
 }

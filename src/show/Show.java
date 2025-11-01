@@ -1,3 +1,8 @@
+package show;
+
+import person.Actor;
+import person.Director;
+
 import java.util.ArrayList;
 
 public class Show {
@@ -22,9 +27,7 @@ public class Show {
     }
 
     public void addNewActor(Actor newActor) {
-        boolean isAlreadyInList = listOfActors.contains(newActor);
-
-        if (isAlreadyInList) {
+        if (listOfActors.contains(newActor)) {
             System.out.println("Данный актер уже есть в списке");
         } else {
             listOfActors.add(newActor);

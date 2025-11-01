@@ -1,3 +1,7 @@
+package person;
+
+import util.Gender;
+
 import java.util.Objects;
 
 public class Actor extends Person {
